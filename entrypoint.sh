@@ -45,6 +45,8 @@ if [ ! -f /etc/nova/.complete ];then
     $CRUDINI --set /etc/nova/nova.conf DEFAULT my_ip $MY_IP
     
     $CRUDINI --set /etc/nova/nova.conf DEFAULT vnc_enabled True
+    
+    $CRUDINI --set /etc/nova/nova.conf spice enabled false
 
     touch /etc/nova/.complete
 fi
