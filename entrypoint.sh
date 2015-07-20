@@ -43,6 +43,8 @@ if [ ! -f /etc/nova/.complete ];then
     $CRUDINI --set /etc/nova/nova.conf DEFAULT vncserver_proxyclient_address $VNCSERVER_PROXYCLIENT_ADDRESS
     
     $CRUDINI --set /etc/nova/nova.conf DEFAULT my_ip $MY_IP
+    
+    $CRUDINI --set /etc/nova/nova.conf DEFAULT vnc_enabled True
 
     touch /etc/nova/.complete
 fi
