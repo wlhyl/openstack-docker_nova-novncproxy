@@ -16,8 +16,6 @@ RUN apt-get clean
 
 RUN env --unset=DEBIAN_FRONTEND
 
-RUN sed -i /NOVA_CONSOLE_PROXY_TYPE/s/.*/NOVA_CONSOLE_PROXY_TYPE=novnc/g /etc/default/nova-consoleproxy
-
 RUN cp -rp /etc/nova/ /nova
 RUN rm -rf /var/log/nova/*
 RUN rm -rf /var/lib/nova/nova.sqlite
